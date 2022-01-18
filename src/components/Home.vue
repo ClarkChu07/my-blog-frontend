@@ -33,6 +33,9 @@
   import axios from 'axios';
   import { useRequest } from 'v3hooks';
   import { particles } from '../config/particles-config'
+  import { watch } from 'fs';
+
+  type resultData = any
 
   export default defineComponent({
     setup() {
@@ -57,11 +60,11 @@
 
       watchEffect(() => {
         if (data.value) {
-          const result = data?.value?.data;
+          const result: resultData = data.value;
           // console.log(result);
-          word.from = result?.from;
-          word.from_who = result?.from_who;
-          word.from_content = result?.hitokoto;
+          word.from = result?.data?.from;
+          word.from_who = result?.data?.from_who;
+          word.from_content = result?.data?.hitokoto;
         }
       })
 

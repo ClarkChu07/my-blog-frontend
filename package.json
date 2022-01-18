@@ -4,7 +4,11 @@
   "scripts": {
     "dev": "vite --host",
     "build": "vue-tsc --noEmit && vite build",
-    "preview": "vite preview"
+    "preview": "vite preview",
+    "lint": "npm run eslint && npm run stylelint",
+    "eslint": "eslint --cache --ext .js,.jsx ./",
+    "eslint:fix": "eslint --fix --cache --ext .js,.jsx,.ts,.tsx ./",
+    "stylelint": "stylelint ./**/*.less"
   },
   "dependencies": {
     "axios": "^0.24.0",
@@ -19,8 +23,10 @@
   },
   "devDependencies": {
     "@types/node": "^17.0.9",
+    "@typescript-eslint/eslint-plugin": "^5.10.0",
     "@vitejs/plugin-vue": "^2.0.0",
     "eslint": "^8.7.0",
+    "eslint-config-airbnb-base": "^15.0.0",
     "eslint-config-prettier": "^8.3.0",
     "eslint-plugin-import": "^2.25.4",
     "eslint-plugin-prettier": "^4.0.0",
