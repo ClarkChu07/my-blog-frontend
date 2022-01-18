@@ -7,6 +7,7 @@
         shape="square"
         size="default"
       ></el-avatar>
+      <p>ClarkChu</p>
       <el-menu
         mode="horizontal"
         router
@@ -14,11 +15,10 @@
         active-text-color="#409EFF"
         :ellipsis="isCollapse"
       >
-        <el-menu-item index="/Home">首页</el-menu-item>
-        <el-menu-item disabled index="/Article">文章</el-menu-item>
-        <el-menu-item disabled index="/Project">项目</el-menu-item>
-        <el-menu-item disabled index="/Message">留言</el-menu-item>
-        <el-menu-item index="/About">关于</el-menu-item>
+        <el-menu-item index="/Home">Home</el-menu-item>
+        <el-menu-item disabled index="/Article">Article</el-menu-item>
+        <el-menu-item disabled index="/Project">Project</el-menu-item>
+        <el-menu-item index="/About">About</el-menu-item>
       </el-menu>
     </el-header>
     <el-main>
@@ -29,7 +29,6 @@
 <script lang="ts">
 import { ref, defineComponent, reactive } from 'vue'
 import { useRouter } from 'vue-router'
-import axios from './utils/axios'
 import logoUrl from './assets/images/logo.png'
 import Home from './components/Home.vue'
 
@@ -96,16 +95,17 @@ a {
 
 .header-flex {
   display: flex;
-  justify-content: space-between;
+  justify-content: start;
   align-items: center;
-  width: 50%;
-  margin: 0 10%;
+  margin-left: 3rem;
   z-index: 99;
 
-  div:first-child {
-    display: flex;
-    justify-content: center;
-    align-items: center;
+  p {
+    font-size: 1.3rem;
+    font-weight: bold;
+    color: #333;
+    margin: 0 8rem 0 1rem;
   }
+
 }
 </style>
