@@ -1,39 +1,33 @@
-import { createRouter, createWebHistory, RouteRecordRaw } from 'vue-router'
-import Home from '../components/Home.vue'
+import { createRouter, createWebHistory, createWebHashHistory, RouteRecordRaw, } from 'vue-router'
 const routes: Array<RouteRecordRaw> = [
   //默认首页
   {
     path: '',
-    redirect: 'home'
+    redirect: 'Home'
   },
   //首页
   {
-    path: '/home',
-    name: 'Home',
+    path: '/Home',
     component: () => import('../components/Home.vue')
   },
   //文章
   {
-    path: '/article',
-    name: 'Article',
+    path: '/Article',
     component: () => import('../components/Article.vue')
   },
   //项目
   {
-    path: '/project',
-    name: 'Project',
+    path: '/Project',
     component: () => import('../components/Project.vue')
   },
   //留言
   {
-    path: '/message',
-    name: 'Message',
+    path: '/Message',
     component: () => import('../components/Message.vue')
   },
   //关于
   {
-    path: '/about',
-    name: 'About',
+    path: '/About',
     component: () => import('../components/About.vue')
   },
   {
@@ -44,7 +38,7 @@ const routes: Array<RouteRecordRaw> = [
   }
 ]
 const router = createRouter({
-  history: createWebHistory(''),
+  history: createWebHashHistory(),
   routes,
   scrollBehavior(to, from, savedPosition) {
     return {
