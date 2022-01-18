@@ -108,7 +108,7 @@
     text-align: center;
     color: #666;
     width: 25rem;
-    margin: 8rem auto 0;
+    margin: 4.5rem auto 0;
     .word-title{
       font-size: 1.8rem;
       font-weight: bold;

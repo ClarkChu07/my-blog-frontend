@@ -12,7 +12,9 @@
         mode="horizontal"
         router
         default-active="/Home"
-        active-text-color="#409EFF"
+        background-color="#424245"
+        text-color="#fff"
+        active-text-color="#ffffff"
         :ellipsis="isCollapse"
       >
         <el-menu-item index="/Home">Home</el-menu-item>
@@ -86,6 +88,10 @@ a {
   line-height: 60px;
 }
 
+.el-avatar{
+  margin-left: 3rem;
+}
+
 .el-main {
   border-top: 1px solid #f2f2f2;
   width: 100%;
@@ -97,13 +103,13 @@ a {
   display: flex;
   justify-content: start;
   align-items: center;
-  margin-left: 3rem;
+  background-color: #424245;
   z-index: 99;
 
   p {
     font-size: 1.3rem;
     font-weight: bold;
-    color: #333;
+    color: #d6d6d6;
     margin: 0 8rem 0 1rem;
   }
 
