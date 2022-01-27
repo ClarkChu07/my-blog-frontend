@@ -1,12 +1,7 @@
 <template>
   <el-container>
     <el-header class="header-flex">
-      <el-avatar
-        :src="Images.logoUrl"
-        fit="contain"
-        shape="square"
-        size="default"
-      ></el-avatar>
+      <el-avatar :src="Images.logoUrl" fit="contain" shape="square" size="default"></el-avatar>
       <p>ClarkChu</p>
       <el-menu
         mode="horizontal"
@@ -45,14 +40,14 @@ export default defineComponent({
     }
   },
   setup() {
-    const isCollapse = false;
+    const isCollapse = false
     const Images = {
-      logoUrl,
-    };
+      logoUrl
+    }
 
     return {
       Images,
-      isCollapse,
+      isCollapse
     }
   }
 })
@@ -88,7 +83,7 @@ a {
   line-height: 60px;
 }
 
-.el-avatar{
+.el-avatar {
   margin-left: 3rem;
 }
 
@@ -112,6 +107,5 @@ a {
     color: #d6d6d6;
     margin: 0 8rem 0 1rem;
   }
-
 }
 </style>
