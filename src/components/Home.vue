@@ -35,9 +35,9 @@ import {
   watchEffect
 } from 'vue'
 import { useRouter } from 'vue-router'
-import { useStore } from 'vuex'
+import { useMainStore } from "../store/main"
 import axios from 'axios'
-import { useRequest } from 'v3hooks'
+import { useRequest } from 'vue-request'
 import { watch } from 'fs'
 import { particles } from '../config/particles-config'
 
@@ -45,6 +45,9 @@ type resultData = any
 
 export default defineComponent({
   setup() {
+    // const mainStore = useMainStore()
+    // console.log(mainStore.$state.count);
+
     const word = reactive({
       from: '',
       from_who: '',
