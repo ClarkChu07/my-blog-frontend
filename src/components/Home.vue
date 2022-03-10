@@ -17,10 +17,8 @@
       </el-row>
     </el-card>
     <el-row class="cert-flex" justify="center" align="middle">
-      <span class="cert">网站备案/许可证号：</span>
-      <el-link href="https://beian.miit.gov.cn/#/Integrated/index" target="_blank"
-        >粤ICP备20019717号-1</el-link
-      >
+      <span class="cert">网站备案号：</span>
+      <el-link href="https://beian.miit.gov.cn" target="_blank">粤ICP备20019717号</el-link>
     </el-row>
   </div>
 </template>

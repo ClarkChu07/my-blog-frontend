@@ -2,7 +2,9 @@ import { defineConfig } from 'vite'
 import vue from '@vitejs/plugin-vue'
 import styleImport from 'vite-plugin-style-import'
 import pkg from './package.json'
+
 const { resolve } = require('path')
+
 const root = process.cwd()
 
 function pathResolve(dir: string) {
@@ -22,7 +24,7 @@ export default defineConfig({
     alias: [
       {
         find: /\/@\//,
-        replacement: pathResolve('src') + '/'
+        replacement: `${pathResolve('src')}/`
       }
     ]
   },
