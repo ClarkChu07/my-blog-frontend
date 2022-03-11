@@ -23,7 +23,7 @@
   </div>
 </template>
 
-<script lang="ts">
+<script setup lang="ts">
 import {
   ref,
   reactive,
@@ -35,53 +35,44 @@ import {
   watchEffect
 } from 'vue'
 import { useRouter } from 'vue-router'
-import { useMainStore } from "../store/main"
+import { useMainStore } from "@/store/main"
 import axios from 'axios'
 import { useRequest } from 'vue-request'
 import { watch } from 'fs'
-import { particles } from '../config/particles-config'
+import { particles } from '@/config/particles-config'
 
 type resultData = any
 
-export default defineComponent({
-  setup() {
-    // const mainStore = useMainStore()
-    // console.log(mainStore.$state.count);
+  // const mainStore = useMainStore()
+  // console.log(mainStore.$state.count);
 
-    const word = reactive({
-      from: '',
-      from_who: '',
-      from_content: ''
-    })
-    const { data, loading } = useRequest(
-      () => {
-        return axios.get(`https://v1.hitokoto.cn`, {
-          params: {
-            c: 'k'
-          }
-        })
-      },
-      {
-        pollingInterval: 20000
-      }
-    )
-
-    watchEffect(() => {
-      if (data.value) {
-        const result: resultData = data.value
-        // console.log(result);
-        word.from = result?.data?.from
-        word.from_who = result?.data?.from_who
-        word.from_content = result?.data?.hitokoto
-      }
-    })
-
-    return {
-      particles,
-      word
+  const word = reactive({
+    from: '',
+    from_who: '',
+    from_content: ''
+  })
+  const { data, loading } = useRequest(
+    () => {
+      return axios.get(`https://v1.hitokoto.cn`, {
+        params: {
+          c: 'k'
+        }
+      })
+    },
+    {
+      pollingInterval: 20000
     }
-  }
-})
+  )
+
+  watchEffect(() => {
+    if (data.value) {
+      const result: resultData = data.value
+      // console.log(result);
+      word.from = result?.data?.from
+      word.from_who = result?.data?.from_who
+      word.from_content = result?.data?.hitokoto
+    }
+  })
 </script>
 <style lang="less" scoped>
 .main {
@@ -99,7 +90,7 @@ export default defineComponent({
     width: 100%;
     background-size: cover;
     background-repeat: no-repeat;
-    background-image: url('../assets/images/index_bg.png');
+    background-image: url('@/assets/images/index_bg.png');
   }
 }
 
