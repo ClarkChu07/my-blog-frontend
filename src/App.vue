@@ -19,38 +19,16 @@
       </el-menu>
     </el-header>
     <el-main>
-      <router-view :key="key" />
+      <router-view></router-view>
     </el-main>
   </el-container>
 </template>
-<script lang="ts">
-import { ref, defineComponent, reactive } from 'vue'
-import { useRouter } from 'vue-router'
+<script setup lang="ts">
 import logoUrl from './assets/images/logo.png'
-import Home from './components/Home.vue'
-
-export default defineComponent({
-  name: 'App',
-  components: {
-    Home
-  },
-  computed: {
-    key() {
-      return this.$route.path + Math.random()
-    }
-  },
-  setup() {
-    const isCollapse = false
-    const Images = {
-      logoUrl
-    }
-
-    return {
-      Images,
-      isCollapse
-    }
-  }
-})
+const isCollapse = false
+const Images = {
+  logoUrl
+}
 </script>
 <style lang="less">
 html,

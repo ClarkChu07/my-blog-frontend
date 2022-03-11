@@ -1,4 +1,5 @@
 import { defineConfig } from 'vite'
+import path from "path";
 import vue from '@vitejs/plugin-vue'
 import styleImport from 'vite-plugin-style-import'
 import pkg from './package.json'
@@ -7,8 +8,9 @@ const { resolve } = require('path')
 
 const root = process.cwd()
 
-function pathResolve(dir: string) {
-  return resolve(process.cwd(), '.', dir)
+function resovePath(paths: string) {
+  // 如果 __dirname 找不到 需要 yarn add @types/node --save-dev
+  return path.resolve(__dirname, paths);
 }
 
 const { dependencies, devDependencies, name, version } = pkg
@@ -21,12 +23,12 @@ export default defineConfig({
   base: './',
   root,
   resolve: {
-    alias: [
-      {
-        find: /\/@\//,
-        replacement: `${pathResolve('src')}/`
-      }
-    ]
+    alias: {
+      "@": path.resolve(__dirname, './src'),
+      '@config': resovePath('./config'),
+      "@components": resovePath('./src/components'),
+      '@utils': resovePath('./src/utils'),
+    }
   },
   server: {
     port: 4000, // 设置服务启动端口号

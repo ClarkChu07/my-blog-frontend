@@ -8,27 +8,22 @@ const routes: Array<RouteRecordRaw> = [
   //首页
   {
     path: '/Home',
-    component: () => import('../components/Home.vue')
+    component: () => import('../pages/Home/index.vue')
   },
   //文章
   {
     path: '/Article',
-    component: () => import('../components/Article.vue')
+    component: () => import('../pages/Article/index.vue')
   },
   //项目
   {
     path: '/Project',
-    component: () => import('../components/Project.vue')
-  },
-  //留言
-  {
-    path: '/Message',
-    component: () => import('../components/Message.vue')
+    component: () => import('../pages/Project/index.vue')
   },
   //关于
   {
     path: '/About',
-    component: () => import('../components/About.vue')
+    component: () => import('../pages/About/index.vue')
   },
   {
     path: '/:currentPath(.*)*', // 路由未匹配到，进入这个
