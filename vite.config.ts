@@ -46,14 +46,9 @@ export default defineConfig({
     }
   },
   build: {
+    minify: 'esbuild',
     target: 'es2015',
     outDir: 'dist',
-    terserOptions: {
-      compress: {
-        keep_infinity: true
-      }
-    },
-    // Turning off brotliSize display can slightly reduce packaging time
     brotliSize: false,
     chunkSizeWarningLimit: 2000
   },

@@ -1,4 +1,9 @@
 import { createRouter, createWebHistory, createWebHashHistory, RouteRecordRaw, } from 'vue-router'
+import Home from '@/pages/Home/index.vue';
+import Article from '@/pages/Article/index.vue';
+import Project from '@/pages/Project/index.vue';
+import About from '@/pages/About/index.vue';
+
 const routes: Array<RouteRecordRaw> = [
   //默认首页
   {
@@ -8,22 +13,22 @@ const routes: Array<RouteRecordRaw> = [
   //首页
   {
     path: '/Home',
-    component: () => import('../pages/Home/index.vue')
+    component: Home
   },
   //文章
   {
     path: '/Article',
-    component: () => import('../pages/Article/index.vue')
+    component: Article
   },
   //项目
   {
     path: '/Project',
-    component: () => import('../pages/Project/index.vue')
+    component: Project
   },
   //关于
   {
     path: '/About',
-    component: () => import('../pages/About/index.vue')
+    component: About
   },
   {
     path: '/:currentPath(.*)*', // 路由未匹配到，进入这个

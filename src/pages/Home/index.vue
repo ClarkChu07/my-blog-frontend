@@ -84,14 +84,6 @@ type resultData = any
   height: 100%;
   width: 100%;
   overflow: hidden;
-
-  &__particles {
-    height: 100%;
-    width: 100%;
-    background-size: cover;
-    background-repeat: no-repeat;
-    background-image: url('@/assets/images/index_bg.png');
-  }
 }
 
 .welcome {
