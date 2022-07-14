@@ -24,66 +24,66 @@
   </el-container>
 </template>
 <script setup lang="ts">
-import logoUrl from './assets/images/logo.png'
-const isCollapse = false
-const Images = {
-  logoUrl
-}
+  import logoUrl from './assets/images/logo.png'
+  const isCollapse = false
+  const Images = {
+    logoUrl
+  }
 </script>
 <style lang="less">
-html,
-body {
-  font-size: 16px;
-  width: 100%;
-  height: 100%;
-  margin: 0;
-  padding: 0;
-}
-#app {
-  font-family: Avenir, Helvetica, Arial, sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
-}
-.router-link-active {
-  text-decoration: none;
-}
-
-a {
-  text-decoration: none;
-}
-.el-container {
-  position: relative;
-}
-.el-header,
-.el-footer {
-  color: #333;
-  text-align: center;
-  line-height: 60px;
-}
-
-.el-avatar {
-  margin-left: 3rem;
-}
-
-.el-main {
-  border-top: 1px solid #f2f2f2;
-  width: 100%;
-  height: 100%;
-  position: relative;
-}
-
-.header-flex {
-  display: flex;
-  justify-content: start;
-  align-items: center;
-  background-color: #424245;
-  z-index: 99;
-
-  p {
-    font-size: 1.3rem;
-    font-weight: bold;
-    color: #d6d6d6;
-    margin: 0 8rem 0 1rem;
+  html,
+  body {
+    font-size: 16px;
+    width: 100%;
+    height: 100%;
+    margin: 0;
+    padding: 0;
   }
-}
+  #app {
+    font-family: Avenir, Helvetica, Arial, sans-serif;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+  }
+  .router-link-active {
+    text-decoration: none;
+  }
+
+  a {
+    text-decoration: none;
+  }
+  .el-container {
+    position: relative;
+  }
+  .el-header,
+  .el-footer {
+    color: #333;
+    text-align: center;
+    line-height: 60px;
+  }
+
+  .el-avatar {
+    margin-left: 3rem;
+  }
+
+  .el-main {
+    border-top: 1px solid #f2f2f2;
+    width: 100%;
+    height: 100%;
+    position: relative;
+  }
+
+  .header-flex {
+    display: flex;
+    justify-content: start;
+    align-items: center;
+    background-color: #424245;
+    z-index: 99;
+
+    p {
+      font-size: 1.3rem;
+      font-weight: bold;
+      color: #d6d6d6;
+      margin: 0 8rem 0 1rem;
+    }
+  }
 </style>

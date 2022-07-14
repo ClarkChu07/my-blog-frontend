@@ -24,24 +24,24 @@
 </template>
 
 <script setup lang="ts">
-import {
-  ref,
-  reactive,
-  defineComponent,
-  computed,
-  onMounted,
-  toRefs,
-  unref,
-  watchEffect
-} from 'vue'
-import { useRouter } from 'vue-router'
-import { useMainStore } from "@/store/main"
-import axios from 'axios'
-import { useRequest } from 'vue-request'
-import { watch } from 'fs'
-import { particles } from '@/config/particles-config'
+  import {
+    ref,
+    reactive,
+    defineComponent,
+    computed,
+    onMounted,
+    toRefs,
+    unref,
+    watchEffect
+  } from 'vue'
+  import { useRouter } from 'vue-router'
+  import { useMainStore } from "@/store/main"
+  import axios from 'axios'
+  import { useRequest } from 'vue-request'
+  import { watch } from 'fs'
+  import { particles } from '@/config/particles-config'
 
-type resultData = any
+  type resultData = any
 
   // const mainStore = useMainStore()
   // console.log(mainStore.$state.count);
@@ -75,58 +75,58 @@ type resultData = any
   })
 </script>
 <style lang="less" scoped>
-.main {
-  display: flex;
-  flex-flow: column nowrap;
-  align-items: start;
-  justify-content: center;
-  position: relative;
-  height: 100%;
-  width: 100%;
-  overflow: hidden;
-}
-
-.welcome {
-  margin: 6rem 0 0 2.5rem;
-  color: #409eff;
-}
-
-.el-row {
-  width: 100%;
-}
-
-.box-card {
-  text-align: center;
-  color: #666;
-  width: 25rem;
-  margin: 4.5rem auto 0;
-  .word-title {
-    font-size: 1.8rem;
-    font-weight: bold;
+  .main {
+    display: flex;
+    flex-flow: column nowrap;
+    align-items: start;
+    justify-content: center;
+    position: relative;
+    height: 100%;
+    width: 100%;
+    overflow: hidden;
   }
 
-  .el-col {
-    &:first-child {
-      font-size: 1.4rem;
+  .welcome {
+    margin: 6rem 0 0 2.5rem;
+    color: #409eff;
+  }
+
+  .el-row {
+    width: 100%;
+  }
+
+  .box-card {
+    text-align: center;
+    color: #666;
+    width: 25rem;
+    margin: 4.5rem auto 0;
+    .word-title {
+      font-size: 1.8rem;
+      font-weight: bold;
     }
-    &:nth-child(2) {
-      font-size: 0.9rem;
-    }
-    &:last-child {
-      font-size: 1.1rem;
-      margin-top: 1rem;
+
+    .el-col {
+      &:first-child {
+        font-size: 1.4rem;
+      }
+      &:nth-child(2) {
+        font-size: 0.9rem;
+      }
+      &:last-child {
+        font-size: 1.1rem;
+        margin-top: 1rem;
+      }
     }
   }
-}
 
-.cert-flex {
-  position: fixed;
-  bottom: 1rem;
-  left: 50%;
-  transform: translateX(-50%);
-}
+  .cert-flex {
+    position: fixed;
+    bottom: 1rem;
+    left: 50%;
+    transform: translateX(-50%);
+  }
 
-.cert {
-  font-size: 0.95rem;
-}
+  .cert {
+    font-size: 0.95rem;
+  }
 </style>
